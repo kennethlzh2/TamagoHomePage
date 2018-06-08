@@ -18,6 +18,7 @@
 		43C425EE20CA9B8100AC6C20 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425ED20CA9B8100AC6C20 /* HomeScreenViewController.m */; };
 		43C425F120CA9F8F00AC6C20 /* LiveUserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425F020CA9F8F00AC6C20 /* LiveUserCollectionViewCell.m */; };
 		43C425F720CAA10200AC6C20 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425F620CAA10200AC6C20 /* TabBarViewController.m */; };
+		43C425FA20CAAAC000AC6C20 /* LanguageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425F920CAAAC000AC6C20 /* LanguageModel.m */; };
 		9256C1AD814E30D4779C5E80 /* libPods-TamagoHomePage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B121A5C02710C1ECFDE9732E /* libPods-TamagoHomePage.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		43C425F020CA9F8F00AC6C20 /* LiveUserCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveUserCollectionViewCell.m; sourceTree = "<group>"; };
 		43C425F520CAA10200AC6C20 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		43C425F620CAA10200AC6C20 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		43C425F820CAAAC000AC6C20 /* LanguageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageModel.h; sourceTree = "<group>"; };
+		43C425F920CAAAC000AC6C20 /* LanguageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanguageModel.m; sourceTree = "<group>"; };
 		44A9AA275791F13FCCA1C418 /* Pods-TamagoHomePage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TamagoHomePage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TamagoHomePage/Pods-TamagoHomePage.debug.xcconfig"; sourceTree = "<group>"; };
 		6E0BF832942B307BC480EAF5 /* Pods-TamagoHomePage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TamagoHomePage.release.xcconfig"; path = "Pods/Target Support Files/Pods-TamagoHomePage/Pods-TamagoHomePage.release.xcconfig"; sourceTree = "<group>"; };
 		B121A5C02710C1ECFDE9732E /* libPods-TamagoHomePage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TamagoHomePage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +104,8 @@
 			children = (
 				43C425E520CA976000AC6C20 /* LiveFeedModel.h */,
 				43C425E620CA976000AC6C20 /* LiveFeedModel.m */,
+				43C425F820CAAAC000AC6C20 /* LanguageModel.h */,
+				43C425F920CAAAC000AC6C20 /* LanguageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 				43C425D020CA90EE00AC6C20 /* ViewController.m in Sources */,
 				43C425F120CA9F8F00AC6C20 /* LiveUserCollectionViewCell.m in Sources */,
 				43C425DB20CA90EF00AC6C20 /* main.m in Sources */,
+				43C425FA20CAAAC000AC6C20 /* LanguageModel.m in Sources */,
 				43C425F720CAA10200AC6C20 /* TabBarViewController.m in Sources */,
 				43C425EE20CA9B8100AC6C20 /* HomeScreenViewController.m in Sources */,
 				43C425CD20CA90EE00AC6C20 /* AppDelegate.m in Sources */,

@@ -10,22 +10,28 @@
 #import "LanguageCollectionViewCell.h"
 #import "LiveUserCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "LiveFeedModel.h"
+#import "LanguageModel.h"
 
 @interface HomeScreenViewController ()
 
 @end
 
 @implementation HomeScreenViewController{
-    NSMutableArray *languageArray;
-    NSMutableArray *userLiveArray;
+    NSArray *languageArray;
+    NSArray *userLiveArray;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    languageArray = [[NSMutableArray alloc] init];
-    userLiveArray = [[NSMutableArray alloc] init];
+    languageArray = [[NSArray alloc] init];
+    userLiveArray = [[NSArray alloc] init];
+    
+    languageArray = [[LanguageModel alloc] getLanguageList];
+    userLiveArray = [[LiveFeedModel alloc] getLiveFeedList];
+    
 }
 
 
@@ -36,8 +42,6 @@
 }
 
 #pragma mark - Collection View
-
-#pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -59,8 +63,9 @@
     if(collectionView == self.languageCollectionViewController){
         LanguageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LanguageCollectionViewCell" forIndexPath:indexPath];
         
+        
+        
         return cell;
-
     }else if(collectionView == self.liveUserCollectionViewController){
         LiveUserCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LiveUserCollectionViewCell" forIndexPath:indexPath];
         
