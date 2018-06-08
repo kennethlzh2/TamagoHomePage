@@ -32,6 +32,24 @@
     languageArray = [[LanguageModel alloc] getLanguageList];
     userLiveArray = [[LiveFeedModel alloc] getLiveFeedList];
     
+    
+    
+    [self.liveUserCollectionViewController layoutIfNeeded];
+    if(userLiveArray.count<1){
+        self.liveUserCollectionViewHeightConstraint.constant = 0;
+    }
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    float cellWidth = (screenWidth - 30) / 2.0;
+    
+    double rows = userLiveArray.count / 2.0;
+    self.liveUserCollectionViewHeightConstraint.constant = ((floorf(cellWidth) + 10) * ceil(rows));
+    
+    
+    [self.liveUserCollectionViewController reloadData];
+    [self.languageCollectionViewController reloadData];
+    
 }
 
 
@@ -63,13 +81,29 @@
     if(collectionView == self.languageCollectionViewController){
         LanguageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LanguageCollectionViewCell" forIndexPath:indexPath];
         
-        
+        if (languageArray.count>0){
+            
+            LanguageModel *model = [languageArray objectAtIndex:[indexPath row]];
+            cell.languageLabel.text = model.title;
+            cell.backgroundColor = [self colorWithHexString:model.hex alpha:1.0];
+            
+        }
         
         return cell;
     }else if(collectionView == self.liveUserCollectionViewController){
         LiveUserCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LiveUserCollectionViewCell" forIndexPath:indexPath];
         
-        
+        if (userLiveArray.count>0){
+            
+            LiveFeedModel *model = [userLiveArray objectAtIndex:[indexPath row]];
+            cell.backgroundImageView.image = nil;
+            cell.viewCountLabel.text = model.runtime;
+            cell.momentLabel.text = model.title;
+            cell.userNameLabel.text = model.director;
+            cell.countryNameLabel.text = model.year;
+            [self loadImageWithUrl:model.posterUrl imageView:cell.backgroundImageView placeholderImage:[UIImage imageNamed:@"no-image"] completed:nil];
+            
+        }
         
         
         return cell;
@@ -83,12 +117,29 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    float cellWidth = (screenWidth - 30) / 2.0;
-    CGSize size = CGSizeMake(floorf(cellWidth), floorf(cellWidth));
+    if(collectionView == self.languageCollectionViewController){
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        CGFloat screenWidth = screenRect.size.width;
+        float cellWidth = (screenWidth - 50) / 3.8;
+        CGSize size = CGSizeMake(floorf(cellWidth), 37);
+        
+        return size;
+    }else if(collectionView == self.liveUserCollectionViewController){
     
-    return size;
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        CGFloat screenWidth = screenRect.size.width;
+        float cellWidth = (screenWidth - 30) / 2.0;
+        CGSize size = CGSizeMake(floorf(cellWidth), floorf(cellWidth));
+        
+        return size;
+    }else{
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        CGFloat screenWidth = screenRect.size.width;
+        float cellWidth = screenWidth ;
+        CGSize size = CGSizeMake(cellWidth, cellWidth);
+        
+        return size;
+    }
 }
 
 

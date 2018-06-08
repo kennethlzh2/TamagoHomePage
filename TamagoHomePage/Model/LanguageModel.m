@@ -10,12 +10,23 @@
 
 @implementation LanguageModel
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary{
+    if(self = [super init]){
+        self.iD = [dictionary objectForKey:@"id"];
+        self.title = [dictionary objectForKey:@"title"];
+        self.hex = [dictionary objectForKey:@"hex"];
+    }
+    
+    return self;
+}
+
+
 -(NSArray *)getLanguageList{
     
-    static NSString *country = @"[[\r\n{\r\n\"id\": 1,\r\n\"title\": \u201CEnglish\u201D,\r\n\u201Chex\u201D: \"F8AB93\"\r\n},\r\n{\r\n\"id\": 2,\r\n\"title\": \u201C\u4E2D\u6587\u201D,\r\n\u201Chex\u201D: \"EB767F\"\r\n},\r\n{\r\n\"id\": 3,\r\n\"title\": \u201CIndonesian\u201D,\r\n\u201Chex\u201D: \"8773A2\"\r\n},\r\n{\r\n\"id\": 4,\r\n\"title\": \u201CTagalog\u201D,\r\n\u201Chex\u201D: \"627D8E\"\r\n},\r\n{\r\n\"id\": 5,\r\n\"title\": \u201CVietnam\u201D,\r\n\u201Chex\u201D: \"F8AB93\"\r\n}\t\t\r\n]]";
+    static NSString *language = @"[\n{\n\"id\": 1,\n\"title\": \"English\",\n\"hex\": \"#F8AB93\"\n},\n{\n\"id\": 2,\n\"title\": \"中文\",\n\"hex\": \"#EB767F\"\n},\n{\n\"id\": 3,\n\"title\": \"Indonesian\",\n\"hex\": \"#8773A2\"\n},\n{\n\"id\": 4,\n\"title\": \"Tagalog\",\n\"hex\": \"#627D8E\"\n},\n{\n\"id\": 5,\n\"title\": \"Vietnam\",\n\"hex\": \"#F8AB93\"\n}\t\t\n]";
     
     
-    self.languageList = [[self convertStringToDictionary:country] mutableCopy];
+    self.languageList = [[self convertStringToDictionary:language] mutableCopy];
     
     
     return self.languageList;
@@ -26,7 +37,15 @@
     NSData *objectData = [str dataUsingEncoding:NSUTF8StringEncoding];
     NSArray *json = [NSJSONSerialization JSONObjectWithData:objectData                                               options:NSJSONReadingMutableContainers error:&jsonError];
     
-    return json;
+    
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+    
+    for(NSDictionary *dic in json){
+        LanguageModel *model = [[LanguageModel alloc] initWithDictionary:dic];
+        [tempArray addObject:model];
+    }
+    
+    return tempArray;
 }
 
 @end

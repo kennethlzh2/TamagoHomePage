@@ -84,13 +84,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0Kg-o8-QX2">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0Kg-o8-QX2">
                                                 <rect key="frame" x="0.0" y="261" width="375" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="SrW-E5-YsZ"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mUR-4F-z0a">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mUR-4F-z0a">
                                                     <size key="itemSize" width="124" height="37"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -98,13 +98,13 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LanguageCollectionViewCell" id="XqU-5w-oqQ" customClass="LanguageCollectionViewCell">
-                                                        <rect key="frame" x="10" y="0.0" width="124" height="37"/>
+                                                        <rect key="frame" x="10" y="6.5" width="124" height="37"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="124" height="37"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="jWL-1y-Sh1">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="jWL-1y-Sh1">
                                                                     <rect key="frame" x="5" y="5" width="114" height="27"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,10 +123,17 @@
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="MSb-yz-dRH" id="QTv-so-q5x"/>
+                                                    <outlet property="delegate" destination="MSb-yz-dRH" id="4FH-bV-L3e"/>
+                                                </connections>
                                             </collectionView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qvN-zE-yup">
                                                 <rect key="frame" x="0.0" y="341" width="375" height="213"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="213" id="5WT-HH-dzg"/>
+                                                </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R0H-Mb-F7V">
                                                     <size key="itemSize" width="132" height="129"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -277,6 +284,10 @@
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="MSb-yz-dRH" id="fKa-LB-us6"/>
+                                                    <outlet property="delegate" destination="MSb-yz-dRH" id="bYl-Tc-XpW"/>
+                                                </connections>
                                             </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -299,7 +310,6 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="AaP-Ss-G3i" firstAttribute="leading" secondItem="MO4-NA-7NY" secondAttribute="leading" id="8CG-AM-uNw"/>
-                                    <constraint firstItem="AaP-Ss-G3i" firstAttribute="height" secondItem="MO4-NA-7NY" secondAttribute="height" id="GsM-Yh-Zcx"/>
                                     <constraint firstItem="AaP-Ss-G3i" firstAttribute="width" secondItem="MO4-NA-7NY" secondAttribute="width" id="H9a-zd-jO0"/>
                                     <constraint firstItem="AaP-Ss-G3i" firstAttribute="top" secondItem="MO4-NA-7NY" secondAttribute="top" id="PSY-am-RUa"/>
                                     <constraint firstAttribute="trailing" secondItem="AaP-Ss-G3i" secondAttribute="trailing" id="Ps9-J1-RmW"/>
@@ -320,6 +330,7 @@
                     <connections>
                         <outlet property="languageCollectionViewController" destination="0Kg-o8-QX2" id="ay4-4E-dDB"/>
                         <outlet property="liveUserCollectionViewController" destination="qvN-zE-yup" id="kT0-9M-4dn"/>
+                        <outlet property="liveUserCollectionViewHeightConstraint" destination="5WT-HH-dzg" id="6q2-Fa-FvW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmI-NK-KCS" userLabel="First Responder" sceneMemberID="firstResponder"/>

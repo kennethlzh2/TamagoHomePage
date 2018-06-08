@@ -11,5 +11,6 @@
 @interface HomeScreenViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *languageCollectionViewController;
 @property (weak, nonatomic) IBOutlet UICollectionView *liveUserCollectionViewController;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *liveUserCollectionViewHeightConstraint;
 
 @end
