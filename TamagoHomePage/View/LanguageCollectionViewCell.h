@@ -10,5 +10,6 @@
 
 @interface LanguageCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *languageLabel;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end

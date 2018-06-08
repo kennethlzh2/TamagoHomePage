@@ -15,10 +15,10 @@
 		43C425DB20CA90EF00AC6C20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425DA20CA90EF00AC6C20 /* main.m */; };
 		43C425E720CA976000AC6C20 /* LiveFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425E620CA976000AC6C20 /* LiveFeedModel.m */; };
 		43C425EB20CA9B4F00AC6C20 /* LanguageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425EA20CA9B4F00AC6C20 /* LanguageCollectionViewCell.m */; };
-		43C425EE20CA9B8100AC6C20 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425ED20CA9B8100AC6C20 /* HomeScreenViewController.m */; };
 		43C425F120CA9F8F00AC6C20 /* LiveUserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425F020CA9F8F00AC6C20 /* LiveUserCollectionViewCell.m */; };
-		43C425F720CAA10200AC6C20 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425F620CAA10200AC6C20 /* TabBarViewController.m */; };
 		43C425FA20CAAAC000AC6C20 /* LanguageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425F920CAAAC000AC6C20 /* LanguageModel.m */; };
+		43C425FD20CAD79500AC6C20 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425FC20CAD79500AC6C20 /* HomeScreenViewController.m */; };
+		43C4260020CAD7DD00AC6C20 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C425FE20CAD7DC00AC6C20 /* TabBarViewController.m */; };
 		9256C1AD814E30D4779C5E80 /* libPods-TamagoHomePage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B121A5C02710C1ECFDE9732E /* libPods-TamagoHomePage.a */; };
 /* End PBXBuildFile section */
 
@@ -37,14 +37,14 @@
 		43C425E620CA976000AC6C20 /* LiveFeedModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveFeedModel.m; sourceTree = "<group>"; };
 		43C425E920CA9B4F00AC6C20 /* LanguageCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageCollectionViewCell.h; sourceTree = "<group>"; };
 		43C425EA20CA9B4F00AC6C20 /* LanguageCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanguageCollectionViewCell.m; sourceTree = "<group>"; };
-		43C425EC20CA9B8100AC6C20 /* HomeScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
-		43C425ED20CA9B8100AC6C20 /* HomeScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
 		43C425EF20CA9F8F00AC6C20 /* LiveUserCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveUserCollectionViewCell.h; sourceTree = "<group>"; };
 		43C425F020CA9F8F00AC6C20 /* LiveUserCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveUserCollectionViewCell.m; sourceTree = "<group>"; };
-		43C425F520CAA10200AC6C20 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
-		43C425F620CAA10200AC6C20 /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		43C425F820CAAAC000AC6C20 /* LanguageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LanguageModel.h; sourceTree = "<group>"; };
 		43C425F920CAAAC000AC6C20 /* LanguageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanguageModel.m; sourceTree = "<group>"; };
+		43C425FB20CAD79500AC6C20 /* HomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
+		43C425FC20CAD79500AC6C20 /* HomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
+		43C425FE20CAD7DC00AC6C20 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		43C425FF20CAD7DD00AC6C20 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		44A9AA275791F13FCCA1C418 /* Pods-TamagoHomePage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TamagoHomePage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TamagoHomePage/Pods-TamagoHomePage.debug.xcconfig"; sourceTree = "<group>"; };
 		6E0BF832942B307BC480EAF5 /* Pods-TamagoHomePage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TamagoHomePage.release.xcconfig"; path = "Pods/Target Support Files/Pods-TamagoHomePage/Pods-TamagoHomePage.release.xcconfig"; sourceTree = "<group>"; };
 		B121A5C02710C1ECFDE9732E /* libPods-TamagoHomePage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TamagoHomePage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +113,10 @@
 		43C425E420CA971800AC6C20 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				43C425FB20CAD79500AC6C20 /* HomeScreenViewController.h */,
+				43C425FC20CAD79500AC6C20 /* HomeScreenViewController.m */,
+				43C425FF20CAD7DD00AC6C20 /* TabBarViewController.h */,
+				43C425FE20CAD7DC00AC6C20 /* TabBarViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,10 +124,6 @@
 		43C425E820CA9B3200AC6C20 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				43C425F520CAA10200AC6C20 /* TabBarViewController.h */,
-				43C425F620CAA10200AC6C20 /* TabBarViewController.m */,
-				43C425EC20CA9B8100AC6C20 /* HomeScreenViewController.h */,
-				43C425ED20CA9B8100AC6C20 /* HomeScreenViewController.m */,
 				43C425E920CA9B4F00AC6C20 /* LanguageCollectionViewCell.h */,
 				43C425EA20CA9B4F00AC6C20 /* LanguageCollectionViewCell.m */,
 				43C425EF20CA9F8F00AC6C20 /* LiveUserCollectionViewCell.h */,
@@ -241,14 +241,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C425FD20CAD79500AC6C20 /* HomeScreenViewController.m in Sources */,
 				43C425EB20CA9B4F00AC6C20 /* LanguageCollectionViewCell.m in Sources */,
 				43C425D020CA90EE00AC6C20 /* ViewController.m in Sources */,
 				43C425F120CA9F8F00AC6C20 /* LiveUserCollectionViewCell.m in Sources */,
 				43C425DB20CA90EF00AC6C20 /* main.m in Sources */,
 				43C425FA20CAAAC000AC6C20 /* LanguageModel.m in Sources */,
-				43C425F720CAA10200AC6C20 /* TabBarViewController.m in Sources */,
-				43C425EE20CA9B8100AC6C20 /* HomeScreenViewController.m in Sources */,
 				43C425CD20CA90EE00AC6C20 /* AppDelegate.m in Sources */,
+				43C4260020CAD7DD00AC6C20 /* TabBarViewController.m in Sources */,
 				43C425E720CA976000AC6C20 /* LiveFeedModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
